@@ -26,7 +26,7 @@
 
 \begin{document}
 
-\title{Homework 6}
+\title{Homework 7}
 
 \maketitle
 
@@ -35,66 +35,72 @@ I've copied the problem itself below and the question numbers for
 your convenience. 
 
 \begin{enumerate}
-	\item (2.18) Solve each of the following simultaneous systems of 
-		congruences (or explain why no solution exists). 
+	\item (3.1) Solve the following congruences. 
 	\begin{enumerate}
-		\item $x = 3 \mod 7$ and $x = 4 \mod 9$
-		\item $x = 137 \mod 423$ and $x = 87 \mod 191$
-		\item $x = 133 \mod 451$ and $x = 237 \mod 697$
-		\item $x = 5 \mod 9$, $x = 6 \mod 10$, and $x = 7 \mod 11$
-		\item $x = 37 \mod 43$, and $x = 22 \mod 49$, and $x = 
-			18 \mod 71$. 
+		\item $x^{19} = 36 \mod 97$ 
+		\item $x^{137} = 428 \mod 541$ 
+		\item $x^{73} = 614 \mod 1159$ 
+		\item $x^{751} = 677 \mod 8023$ 
+		\item $x^{38993} = 328047 \mod 401227$ (Hint: $402117 = 
+			608 \cdot 661$)
 	\end{enumerate}
-	\item (2.21) 
+	\item (3.4) Recall from Sect. 1.3 that \textit{Euler's phi function} 
+		$\phi(N)$ is defined by 
+	\begin{displaymath}
+		\phi(N) = \# \lbrace 0 \leq k < N \mid \operatorname{gcd}(
+		k,N) = 1 \rbrace
+	\end{displaymath}
+		In other words, $\phi(N)$ is the number of integers between 
+		$0$ and $N-1$ that are relatively prime to $N$, or 
+		equivariantly, the number of elements of $\mathbb{Z}/N\mathbb{Z}$ 
+		that have inverses modulo $N$. 
 	\begin{enumerate}
-		\item Let $a,b,c$ be positive integers and suppose that 
+		\item Compute the values of $\phi(6), \phi(9), \phi(15)$, 
+			and $\phi(17)$. 
+		\item If $p$ is prime, what is the value of $\phi(p)$? 
+		\item Prove \textit{Euler's formula} for all $a$ satisfying 
+			$\operatorname{gcd}(a,N) = 1$
 		\begin{displaymath}
-			a \mid c, b \mid c, \operatorname{and} 
-			\operatorname{gcd}(a,b) = 1
+			a^{\phi(N)} = 1 \mod N 
 		\end{displaymath}
-		Prove that $ab \mid c$.
-		\item Let $c$ and $c^\prime$ be two solutions to the system of 
-			simultaneous congruences (2.7) in the Chinese 
-			remainder theorem (Theorem 2.24). Prove that 
-		\begin{displaymath}
-			c = c^\prime \mod m_1 m_2 \cdots m_k 
-		\end{displaymath}
-			
+			(Hint: Mimic the proof of Fermat's little theorem 
+			(Theorem 1.24), but instead of looking at all the 
+			multiples of $a$ as was done in (1.8), just take the 
+			multiples $ka$ of $a$ for values of $k$ satisfying 
+			$\operatorname{gcd}(k,N)=1$). 
 	\end{enumerate}
-		
-	\item (2.23) Use the method described in Sect. 2.8.1 to find square 
-		roots modulo the following composite moduli.
+	\item (3.7) Alice publishes her RSA public key: modulus $N = 2038667$  
+		and exponent $e=103$. 
 	\begin{enumerate}
-		\item Find a square root of $340$ modulo $437$. (Note that 
-			$437 = 19 \cdot 23$.) 
-		\item Find a square root of $253$ modulo $3143$. 
-		\item Find four square roots of $2833$ modulo $4189$. (The 
-			modulus factors as $4189 = 59\cdot 71$. Note that your 
-			four square roots should be distinct modulo $4189$.)
-		\item Find eight square roots of $813$ modulo $868$. 
+		\item Bob wants to send Alice the message $m=892383$. What 
+			ciphertext does Bob send to Alice?
+		\item Alice knows that her modulus factors into the produce of 
+			primes, one of which is $p=1301$. Find a decryption 
+			exponent $d$ for Alice. 
+		\item Alice receives the ciphertext $317730$ from Bob. Decrypt 
+			the message.
 	\end{enumerate}
-	\item (2.25) Suppose $n=pq$ with $p$ and $q$ distinct odd primes. 
+	\item (3.9) For each of the given values of $N = pq$ and $(p-1)(q-1)$, use 
+		the method described in Remark 3.11 to determine $p$ and $q$. 
 	\begin{enumerate}
-		\item Suppose that $\operatorname{gcd}(a,pq) = 1$. Prove that 
-			if the equation $x^2 = a \mod n$ has any solution 
-			then it has four solutions. 
-		\item Suppose that you have a machine that could find all four 
-			solutions for some $a$. How could you use this machine 
-			to factor $n$?
+		\item $N = pq = 325717$ and $(p-1)(q-1) = 351520$. 
+		\item $N = pq = 77083921$ and $(p-1)(q-1) = 77066212$. 
+		\item $N = pq = 109404161$ and $(p-1)(q-1) = 109380612$. 
+		\item $N = pq = 172205490419$ and $(p-1)(q-1) = 172204660344$. 
 	\end{enumerate}
-	\item (2.28) Use the Polig-Hellman algorithm (Theorem 2.31) to solve 
-		the discrete logarithm problem 
-		\begin{displaymath}
-			g^x = a \mod p 
-		\end{displaymath}
-		in each of the following cases. 
+	\item (3.15) Use the Miller-Rabin test on each of the following numbers. 
+		In each case, either provide a Miller-Rabin witness for the 
+		compositeness of $n$, or conclude that $n$ is probably prime 
+		by providing $10$ numbers that not Miller-Rabin witnesses for 
+		$n$. 
 	\begin{enumerate}
-		\item $p=433$, $g=7$, $a=166$
-		\item $p=746497$, $g=10$, $a=243278$
-		\item $p=41022299$, $g=2$, $a=39183497$ (Hint: $p = 2 \cdot 29^5 
-			+ 1$.)
-		\item $p=1291799$, $g=17$, $a=192988$ (Hint: $p-1$ has a factor 
-			of $709$). 
+		\item $n=1105$ 
+		\item $n=294409$ 
+		\item $n=294439$ 
+		\item $n=118901509$ 
+		\item $n=118901521$ 
+		\item $n=118901527$ 
+		\item $n=118915387$ 
 	\end{enumerate}
 \end{enumerate}
 \end{document}

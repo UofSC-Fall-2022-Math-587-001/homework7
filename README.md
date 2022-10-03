@@ -1,4 +1,4 @@
-## Homework 6
+## Homework 7
 
 This week we have a written part and an implementation part. 
 
@@ -15,7 +15,3 @@ Note: when you submit, your filename must be `solutions.pdf` and it must be a pd
 
 ### Implementation part 
 
-This week you will implement the algorithm of the Chinese remainder theorem 
-for solving a system of two congruences in Go. You may find it helpful to extend 
-this to larger systems. Implementing the Pohlig-Hellman algorithm using this 
-and Shanks' algorithm would also help with homework. 
