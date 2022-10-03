@@ -1,0 +1,100 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{caution}[theorem]{Caution}
+
+\begin{document}
+
+\title{Homework 6}
+
+\maketitle
+
+For this week, please answer the following questions from the text. 
+I've copied the problem itself below and the question numbers for 
+your convenience. 
+
+\begin{enumerate}
+	\item (2.18) Solve each of the following simultaneous systems of 
+		congruences (or explain why no solution exists). 
+	\begin{enumerate}
+		\item $x = 3 \mod 7$ and $x = 4 \mod 9$
+		\item $x = 137 \mod 423$ and $x = 87 \mod 191$
+		\item $x = 133 \mod 451$ and $x = 237 \mod 697$
+		\item $x = 5 \mod 9$, $x = 6 \mod 10$, and $x = 7 \mod 11$
+		\item $x = 37 \mod 43$, and $x = 22 \mod 49$, and $x = 
+			18 \mod 71$. 
+	\end{enumerate}
+	\item (2.21) 
+	\begin{enumerate}
+		\item Let $a,b,c$ be positive integers and suppose that 
+		\begin{displaymath}
+			a \mid c, b \mid c, \operatorname{and} 
+			\operatorname{gcd}(a,b) = 1
+		\end{displaymath}
+		Prove that $ab \mid c$.
+		\item Let $c$ and $c^\prime$ be two solutions to the system of 
+			simultaneous congruences (2.7) in the Chinese 
+			remainder theorem (Theorem 2.24). Prove that 
+		\begin{displaymath}
+			c = c^\prime \mod m_1 m_2 \cdots m_k 
+		\end{displaymath}
+			
+	\end{enumerate}
+		
+	\item (2.23) Use the method described in Sect. 2.8.1 to find square 
+		roots modulo the following composite moduli.
+	\begin{enumerate}
+		\item Find a square root of $340$ modulo $437$. (Note that 
+			$437 = 19 \cdot 23$.) 
+		\item Find a square root of $253$ modulo $3143$. 
+		\item Find four square roots of $2833$ modulo $4189$. (The 
+			modulus factors as $4189 = 59\cdot 71$. Note that your 
+			four square roots should be distinct modulo $4189$.)
+		\item Find eight square roots of $813$ modulo $868$. 
+	\end{enumerate}
+	\item (2.25) Suppose $n=pq$ with $p$ and $q$ distinct odd primes. 
+	\begin{enumerate}
+		\item Suppose that $\operatorname{gcd}(a,pq) = 1$. Prove that 
+			if the equation $x^2 = a \mod n$ has any solution 
+			then it has four solutions. 
+		\item Suppose that you have a machine that could find all four 
+			solutions for some $a$. How could you use this machine 
+			to factor $n$?
+	\end{enumerate}
+	\item (2.28) Use the Polig-Hellman algorithm (Theorem 2.31) to solve 
+		the discrete logarithm problem 
+		\begin{displaymath}
+			g^x = a \mod p 
+		\end{displaymath}
+		in each of the following cases. 
+	\begin{enumerate}
+		\item $p=433$, $g=7$, $a=166$
+		\item $p=746497$, $g=10$, $a=243278$
+		\item $p=41022299$, $g=2$, $a=39183497$ (Hint: $p = 2 \cdot 29^5 
+			+ 1$.)
+		\item $p=1291799$, $g=17$, $a=192988$ (Hint: $p-1$ has a factor 
+			of $709$). 
+	\end{enumerate}
+\end{enumerate}
+\end{document}
