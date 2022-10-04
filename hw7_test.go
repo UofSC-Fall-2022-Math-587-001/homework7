@@ -1,61 +1,60 @@
-package hw6
+package hw7
 
 import (
 	"testing"
 )
 
 func Test1(t *testing.T) {
-	N := 3
-	a := 1
-	M := 4
-	b := 2
-	P := N*M
-	got := solvePairCongRelPrime(N,a,M,b)
-	want := 10 
-
-	if (got - want % P) != 0  {
-		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
+	N := 10
+	a := 3
+	got := MillerRabinTest(N,a)
+	want := "Composite"
+	
+	if got != want {
+		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
 func Test2(t *testing.T) {
-	N := 5
-	a := 2
-	M := 7
-	b := 5
-	P := N*M
-	got := solvePairCongRelPrime(N,a,M,b)
-	want := 12 
-
-	if (got - want % P) != 0  {
-		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
+	N := 15
+	a := 3
+	got := MillerRabinTest(N,a)
+	want := "Composite"
+	
+	if got != want {
+		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
 func Test3(t *testing.T) {
-	N := 19
-	a := 17
-	M := 23
-	b := 13
-	P := N*M
-	got := solvePairCongRelPrime(N,a,M,b)
-	want := 36 
-
-	if (got - want % P) != 0  {
-		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
+	N := 21
+	a := 20
+	got := MillerRabinTest(N,a)
+	want := "Test Fails"
+	
+	if got != want {
+		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
 func Test4(t *testing.T) {
-	N := 59
-	a := 46
-	M := 71
-	b := 34
-	P := N*M
-	got := solvePairCongRelPrime(N,a,M,b)
-	want := 105 
+	N := 19
+	a := 4
+	got := MillerRabinTest(N,a)
+	want := "Test Fails"
+	
+	if got != want {
+		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+	}
+}
 
-	if (got - want % P) != 0  {
-		t.Errorf("You say that %d solves x = %d mod %d and x = %d mod %d but it is not equal to %d mod %d", got, a, N, b, M, want, P)
+func Test5(t *testing.T) {
+	N := 33
+	a := 2
+	got := MillerRabinTest(N,a)
+	want := "Composite"
+	
+	if got != want {
+		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
