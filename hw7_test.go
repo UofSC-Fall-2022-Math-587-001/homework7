@@ -11,7 +11,7 @@ func Test1(t *testing.T) {
 	want := "Composite"
 	
 	if got != want {
-		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+		t.Errorf("Testing N=%d with a=%d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
@@ -22,7 +22,7 @@ func Test2(t *testing.T) {
 	want := "Composite"
 	
 	if got != want {
-		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+		t.Errorf("Testing N=%d with a=%d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
@@ -33,7 +33,7 @@ func Test3(t *testing.T) {
 	want := "Test Fails"
 	
 	if got != want {
-		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+		t.Errorf("Testing N=%d with a=%d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
@@ -44,7 +44,7 @@ func Test4(t *testing.T) {
 	want := "Test Fails"
 	
 	if got != want {
-		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+		t.Errorf("Testing N=%d with a=%d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
 
@@ -55,6 +55,6 @@ func Test5(t *testing.T) {
 	want := "Composite"
 	
 	if got != want {
-		t.Errorf("Testing %d with %d you find %q when you should find %q\n", N, a, got, want)
+		t.Errorf("Testing N=%d with a=%d you find %q when you should find %q\n", N, a, got, want)
 	}
 }
